@@ -1,12 +1,13 @@
 ﻿using System;
-
+using Microsoft.Boogie;
+  
 namespace Edsger
 {
-  class Program
+  public class EdsgerDriver
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Hello World!");
+      OnlyBoogie.Main(args);
     }
   }
 }

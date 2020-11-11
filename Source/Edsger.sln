@@ -43,6 +43,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Run Configurations", "Run Configurations", "{A305C717-4559-4EE0-860D-1BAD811D07B0}"
 ProjectSection(SolutionItems) = preProject
 	.run\DivMod1.run.xml = .run\DivMod1.run.xml
+	.run\DivMod1_Boogie.run.xml = .run\DivMod1_Boogie.run.xml
 EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdsgerTests", "EdsgerTests\EdsgerTests.csproj", "{E5720B86-A936-4DD6-ADD5-C6D356669C25}"
