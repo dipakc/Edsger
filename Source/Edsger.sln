@@ -40,6 +40,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provers", "Provers", "{2B1D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{EB54F155-F3FD-43A7-BD16-F218F34AC72B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Run Configurations", "Run Configurations", "{A305C717-4559-4EE0-860D-1BAD811D07B0}"
+ProjectSection(SolutionItems) = preProject
+	.run\DivMod1.run.xml = .run\DivMod1.run.xml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
