@@ -45,6 +45,8 @@ ProjectSection(SolutionItems) = preProject
 	.run\DivMod1.run.xml = .run\DivMod1.run.xml
 EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdsgerTests", "EdsgerTests\EdsgerTests.csproj", "{E5720B86-A936-4DD6-ADD5-C6D356669C25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{C132DD06-84CA-4B2D-99C2-F3F7DF214D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C132DD06-84CA-4B2D-99C2-F3F7DF214D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C132DD06-84CA-4B2D-99C2-F3F7DF214D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5720B86-A936-4DD6-ADD5-C6D356669C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5720B86-A936-4DD6-ADD5-C6D356669C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5720B86-A936-4DD6-ADD5-C6D356669C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5720B86-A936-4DD6-ADD5-C6D356669C25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CE07535E-1A3A-4432-A0BF-5A45CD4984B2} = {2B1D626A-29D6-4818-BFCD-DC15D845A311}
