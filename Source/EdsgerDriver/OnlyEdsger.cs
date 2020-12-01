@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.Boogie;
   
-namespace Edsger
+namespace EdsgerDriver
 {
-  public class EdsgerDriver
+  public class OnlyEdsger
   {
     static void Main(string[] args)
     {

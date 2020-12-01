@@ -41,4 +41,4 @@ Source/*.userprefs
 # macos files
 .DS_Store
 
-/Source/Edsger/TestOutput/
+/Source/EdsgerTests/TestOutput/

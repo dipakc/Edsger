@@ -1,0 +1,4 @@
+EdsgerDriver synthesized 1 function.
+(define-fun f (() (r Int) (a Int) (b Int)) Int (- r b))
+
+Boogie program verifier finished with 1 verified, 0 errors

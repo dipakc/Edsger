@@ -6,10 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="TestOutput" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\boogie\Source\BoogieDriver\BoogieDriver.csproj" />
     </ItemGroup>
 

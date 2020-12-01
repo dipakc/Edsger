@@ -8,7 +8,7 @@ namespace EdsgerTests
     public void Setup()
     {
     }
-
+    
     [Test]
     public void Test1()
     {

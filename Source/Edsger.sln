@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edsger", "Edsger\Edsger.csproj", "{7386CD5B-F373-4F0C-9EB5-BC3EE732CE79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdsgerDriver", "EdsgerDriver\EdsgerDriver.csproj", "{7386CD5B-F373-4F0C-9EB5-BC3EE732CE79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbsInt", "boogie\Source\AbsInt\AbsInt.csproj", "{129FBEF8-ABE1-4C8A-A646-A7CD68574809}"
 EndProject

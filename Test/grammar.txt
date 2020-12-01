@@ -1,0 +1,26 @@
+(synth-grammar
+    (   (ntStart %TYPE%) (ntInt Int) (ntBool Bool) (ntReal Real) (ntString String)) 
+    (
+        (ntStart %TYPE% (nt%TYPE%))
+        (ntInt Int (
+            (Variable Int)
+            (Constant Int) 
+            (- ntInt ntInt) 
+            (+ ntInt ntInt)
+            (str.len ntString)
+         ))
+        (ntBool Bool (
+            (Variable Bool)
+            (Constant Bool) 
+         ))
+        (ntReal Real (
+            (Variable Real)
+            (Constant Real) 
+         ))
+        (ntString String (
+            (Variable Bool)
+            (Constant Bool)
+            (str.++ ntString ntString) 
+         ))         
+    )
+)
