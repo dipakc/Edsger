@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run_Boogie_CVC4" type="DotNetProject" factoryName=".NET Project">
+    <option name="EXE_PATH" value="$PROJECT_DIR$/boogie/Source/BoogieDriver/bin/Debug/netcoreapp3.1/BoogieDriver.dll" />
+    <option name="PROGRAM_PARAMETERS" value="/errorTrace:0 /nologo /print:- /proverOpt:SOLVER=CVC4 /proverOpt:PROVER_PATH=$USER_HOME$/progs/cvc4_1_8/cvc4_wrapper.sh /proverLog:$PROJECT_DIR$/EdsgerTests/TestOutput/@PREFIX@_@PROC@.smt /logPrefix:DivModDeriv01 $PROJECT_DIR$/EdsgerTests/TestData/DivModDeriv03.bpl" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EdsgerDriver/bin/Debug/netcoreapp3.1" />
+    <option name="PASS_PARENT_ENVS" value="1" />
+    <option name="USE_EXTERNAL_CONSOLE" value="0" />
+    <option name="USE_MONO" value="0" />
+    <option name="RUNTIME_ARGUMENTS" value="" />
+    <option name="PROJECT_PATH" value="$PROJECT_DIR$/EdsgerDriver/EdsgerDriver.csproj" />
+    <option name="PROJECT_EXE_PATH_TRACKING" value="0" />
+    <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+    <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+    <option name="PROJECT_KIND" value="DotNetCore" />
+    <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+    <method v="2">
+      <option name="Build" />
+    </method>
+  </configuration>
+</component>

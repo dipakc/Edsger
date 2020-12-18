@@ -1,0 +1,82 @@
+{
+	"name": "EdsgerVSCodeClient",
+	"displayName": "EdsgerVSCodeClient",
+	"description": "Edsger VSCode Client",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:EdsgerVSCodeClient.helloWorld",
+		"onCommand:EdsgerVSCodeClient.Synthesize",
+		"onCommand:EdsgerVSCodeClient.ConjunctAsInv",
+		"onCommand:EdsgerVSCodeClient.Verify"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "EdsgerVSCodeClient.helloWorld",
+				"title": "Hello World"
+			},
+			{
+				"command": "EdsgerVSCodeClient.Verify",
+				"title": "Edsger: Verify"
+			},
+			{
+				"command": "EdsgerVSCodeClient.Synthesize",
+				"title": "Edsger: Synthesize"
+			},
+			{
+				"command": "EdsgerVSCodeClient.ConjunctAsInv",
+				"title": "Edsger: ConjunctAsInv"
+			}
+		],
+		"languages": [
+			{
+				"id": "boogie",
+				"aliases": [
+					"Boogie",
+					"boogie"
+				],
+				"extensions": [
+					".bpl"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "boogie",
+				"scopeName": "source.boogie",
+				"path": "./syntaxes/boogie.tmLanguage.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.51.0",
+		"@typescript-eslint/eslint-plugin": "^4.9.0",
+		"@typescript-eslint/parser": "^4.9.0",
+		"eslint": "^7.15.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-jsonrpc": "^5.0.1",
+		"vscode-languageclient": "^6.1.3",
+		"vscode-test": "^1.4.1"
+	}
+}

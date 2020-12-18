@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../.vscode/extensions"
+		},
+		{
+			"path": "../../EdsgerVSCodeClient"
+		}
+	],
+	"settings": {}
+}
