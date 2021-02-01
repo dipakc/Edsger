@@ -56,10 +56,14 @@ let IntroWhileTest()=
     let program = ExecutionEngine.ParseBoogieProgram(fileNames, false)
     
     let p1 = ToEDProgram program
+    printfn "%s" (StringOfProgram 0 p1)
     //--------
     let _, p2 = TopDownOnce (Util.lift IntroWhileRule) p1
     let p2 = p2 :?> EDProgram 
     //-------
     
     printfn "%s" (StringOfProgram 0 p2)
-    Assert.AreEqual(2, 2)    
+    Assert.AreEqual(2, 2)
+    
+    
+    

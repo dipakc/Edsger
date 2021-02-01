@@ -55,7 +55,7 @@ and EDBigBlockFlat =  //Edsger specific
 and EDCmd =
     | EDAssignCmd of string
     | EDCmdContracts
-    | EDCommentCmd
+    | EDCommentCmd of string
     | EDHavocCmd
     | EDPredicateCmdW of EDPredicateCmd 
     | EDRE
@@ -269,7 +269,7 @@ and StringOfCmd (indent: int) (cmd: EDCmd): string =
     match cmd with
     | EDAssignCmd(value) -> value
     | EDCmdContracts -> Unk
-    | EDCommentCmd -> Unk
+    | EDCommentCmd(comment) -> indentify indent ("//" + comment + "\n")
     | EDHavocCmd -> Unk
     | EDPredicateCmdW(predicateCmd) -> StringOfPredicateCmd indent predicateCmd 
     | EDRE -> Unk
@@ -288,25 +288,37 @@ and StringOfStructuredCmd (indent: int) (sc: EDStructuredCmd): string =
     | EDIfCmd -> Unk
     | EDStructuredCmdContracts -> Unk
     //| EDWhileCmd(Invariants: EDPredicateCmd list * Guard: EDExpr * Body: EDBigBlockFlat list
-    |  EDWhileCmd(inv, grd, body) ->
-        let invrep =
-            inv
-            |> List.map (StringOfPredicateCmd indent) 
-            |> List.fold (+) ""
+    |  EDWhileCmd(invs, grd, body) ->
+        let IND = String.replicate indent "    "
         
-        let grdrep = StringOfExpr indent grd
+        let invrep =
+            invs
+            |> List.map (StringOfPredicateCmd indent)
+            //|> List.map (fun x -> x)
+            |> String.concat ""
+        
+        let invrep = 
+            [for inv in invs do
+                match inv with
+                | EDAssertCmdW(EDAssertBasicCmd(expr)) ->
+                    let exprRep = (StringOfExpr 0 expr)
+                    yield (sprintf "%sinvariant %s;\n" IND exprRep)
+                | _ -> Unk
+            ]
+            |> String.concat ""                
+        
+        let grdrep = StringOfExpr 0 grd
         
         let bodyrep = 
             body
             |> List.map (StringOfBigBlock indent)
-            |> List.fold (+) ""
+            |> String.concat ""
         
-        let IND = String.replicate indent "    "
                 
         sprintf "%swhile (%s)\n" IND grdrep
-        + sprintf "%sinvariant (%s);\n" IND invrep
+        + invrep
         + sprintf "%s{\n" IND
-        + sprintf "%s\n" bodyrep
+        + sprintf "%s" bodyrep
         + sprintf "%s}\n" IND
                 
 and StringOfTransferCmd (indent: int) (tc: EDTransferCmd): string =
@@ -322,7 +334,7 @@ and StringOfPredicateCmd (indent: int) (pc: EDPredicateCmd): string =
         StringOfAssertCmd indent assertCmd 
     
     | EDAssumeCmd(edExpr) ->
-        indentify indent (sprintf "%s%s%s" "assume(" (StringOfExpr 0 edExpr)  ");\n")
+        indentify indent (sprintf "%s%s%s" "assume " (StringOfExpr 0 edExpr)  ";\n")
 
 and StringOfStateCmd (indent: int) (sc: EDStateCmd): string =
     match sc with

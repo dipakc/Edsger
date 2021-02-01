@@ -93,7 +93,7 @@ and  deconCmd cmd =
     match cmd with
     | EDAssignCmd(_) -> []
     | EDCmdContracts -> []
-    | EDCommentCmd -> []
+    | EDCommentCmd(comment) -> []
     | EDHavocCmd -> []
     | EDPredicateCmdW(predicateCmd) -> [predicateCmd]//deconPredicateCmd(predicateCmd)
     | EDRE -> []
@@ -299,17 +299,26 @@ and conBigBlockFlat (term: EDBigBlockFlat) (childs: IEDBase list): EDBigBlockFla
     
 and conCmd (term: EDCmd) (childs: IEDBase list): EDCmd =
     match term with
-    | EDAssignCmd(repr) -> term
-    | EDCmdContracts -> term
-    | EDCommentCmd -> term
-    | EDHavocCmd -> term
+    | EDAssignCmd(repr) ->
+        assert childs.IsEmpty
+        term
+    | EDCmdContracts ->
+        term
+    | EDCommentCmd(comment) ->
+        assert childs.IsEmpty
+        term
+    | EDHavocCmd ->
+        term
     | EDPredicateCmdW(edPredicateCmd) ->
         EDPredicateCmdW(childs.Head :?> EDPredicateCmd)        
-    | EDRE -> term
+    | EDRE ->
+        term
     | EDStateCmdW(edStateCmd) ->
         EDStateCmdW(childs.Head :?> EDStateCmd)        
-    | EDSugaredCmd -> term
-    | EDYieldCmd -> term
+    | EDSugaredCmd ->
+        term
+    | EDYieldCmd ->
+        term
     
 and conStructuredCmd (structuredCmd: EDStructuredCmd) (childs: IEDBase list) : EDStructuredCmd =
     Unk
@@ -397,14 +406,17 @@ let IntroWhileRule(prog: EDCmd): EDStructuredCmd option =
     match prog with
     | EDPredicateCmdW(EDAssumeCmd(EDNAryExpr(EDBinaryOperator(op, "&&", 2), args))) ->
         let invExpr = args.Head
-        let inv = EDAssertCmdW(EDLoopInvMaintainedAssertCmd(invExpr))
+        let inv = EDAssertCmdW(EDAssertBasicCmd(invExpr))
         let ngrd: EDExpr = args.Tail.Head        
         let grd =
                 match ngrd with
                 | EDNAryExpr(op, args) -> EDNAryExpr(getNegOp(op), args)
                 | _ -> Unk
         
-        let body: IEDBigBlock list = [EDBigBlockFlat([EDPredicateCmdW(EDAssumeCmd(invExpr))])]
+        let body: IEDBigBlock list = [EDBigBlockFlat([
+            EDCommentCmd(" Loop Body")
+            EDPredicateCmdW(EDAssumeCmd(invExpr))
+        ])]
         
         Some(EDComposition([
             EDPredicateCmdW(EDAssumeCmd(invExpr))
