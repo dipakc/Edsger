@@ -3,7 +3,7 @@ function abs(x: int): int
    if x < 0 then -x else x
 }
  
-//function {:synthesize} f(A: int, B: int, x: int, y: int) returns (int);
+function {:synthesize} f(B: int, e: int) returns (int);
 
 procedure Bresenham(A: int, B: int)
 requires (0 <= B && B <= A);
@@ -20,15 +20,12 @@ requires (0 <= B && B <= A);
         // Mark the point.
         assert 2 * abs(A * y - B * x) <= A;
         
-        if (e < 0) 
-        {
-            e := e + 2 * B;
-        }
-        else
-        {
-            e := e + 2 * (B - A);
-            y := y + 1;
-        }
+        assume e < 0;
+
+        e := f(B, e);
+
+        assert e == 2 * (x + 2) * B - (2 * y + 1) * A;
+
         x := x + 1;
     } 
 }

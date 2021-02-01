@@ -1,4 +1,3 @@
-function {:inline} f(r: int, a: int, b: int) returns (int) {r - b}
 
 procedure DivMod(a: int, b: int) returns (q: int, r: int);
 requires a >= 0 && b > 0;
@@ -15,7 +14,7 @@ implementation DivMod(a: int, b: int) returns (q: int, r: int)
     invariant a == q * b + r && 0 <= r;
     {
         q := q + 1;
-        r := f(r, a, b);
+        r := r - b;
         assert a == q * b + r && 0 <= r;
     }
 }

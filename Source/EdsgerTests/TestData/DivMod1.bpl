@@ -1,4 +1,4 @@
-function {:hole} f(r: int, a: int, b: int) returns (int);
+function {:synthesize} f(r: int, a: int, b: int) returns (int);
 
 procedure DivMod(a: int, b: int) returns (q: int, r: int)
 requires (a >= 0 && b > 0);

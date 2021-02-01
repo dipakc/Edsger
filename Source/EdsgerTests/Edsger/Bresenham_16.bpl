@@ -3,7 +3,7 @@ function abs(x: int): int
    if x < 0 then -x else x
 }
  
-//function {:synthesize} f(A: int, B: int, x: int, y: int) returns (int);
+//function {:synthesize} f(B: int, e: int) returns (int);
 
 procedure Bresenham(A: int, B: int)
 requires (0 <= B && B <= A);
