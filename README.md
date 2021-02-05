@@ -24,7 +24,7 @@ cd BASE-DIRECTORY
 
 ```
 cd BASE-DIRECTORY
-git clone https://github.com/trishullab/edsger.git --recurse-submodules
+git clone <repository-url> --recurse-submodules
 dotnet build Source/Edsger.sln
 ```
 
