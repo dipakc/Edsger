@@ -38,10 +38,13 @@ Location of the compiled Edsger binary:
 
 ## Backend SMT Solver
 
-For synthesis, Edsger currently supports [CVC4](https://cvc4.github.io/) solver. Call Edsger with `/proverOpt:SOLVER=CVC4`.
+For synthesis, Edsger currently supports [CVC4](https://cvc4.github.io/) solver. 
 
-Edsger looks for an executable named `cvc4` in `PATH`. You can explicitly specify the
-solver name as `/proverOpt:PROVER_NAME=<exeName>` and solver path as `/ProverOpt:PROVER_PATH=<path>`.
+<!-- Call Edsger with `/proverOpt:SOLVER=CVC4`. -->
+
+Edsger looks for an executable named `cvc4` in `PATH`. 
+<!-- You can explicitly specify the
+solver name as `/proverOpt:PROVER_NAME=<exeName>` and solver path as `/ProverOpt:PROVER_PATH=<path>`. -->
 
 
 ## License
