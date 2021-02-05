@@ -1,6 +1,6 @@
 # Edsger
 
-Edsger is a program synthesis system for synthesizing programs from formal specifications. 
+Edsger is a program synthesis system for deriving programs from formal specifications. 
 It uses the [Boogie](https://github.com/boogie-org/boogie) verification language to specify programs and their specifications.  
 
 Edsger uses the Boogie verifier to generate the verification conditions and 
@@ -24,7 +24,7 @@ cd BASE-DIRECTORY
 
 ```
 cd BASE-DIRECTORY
-git clone https://github.com/trishullab/edsger.git --recurse-submodules
+git clone <repository-url> --recurse-submodules
 dotnet build Source/Edsger.sln
 ```
 
