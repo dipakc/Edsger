@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdsgerDriver", "EdsgerDriver\EdsgerDriver.csproj", "{7386CD5B-F373-4F0C-9EB5-BC3EE732CE79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdsgerWrapper", "EdsgerWrapper\EdsgerWrapper.csproj", "{7386CD5B-F373-4F0C-9EB5-BC3EE732CE79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbsInt", "boogie\Source\AbsInt\AbsInt.csproj", "{129FBEF8-ABE1-4C8A-A646-A7CD68574809}"
 EndProject
@@ -50,7 +50,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdsgerTests", "EdsgerTests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdsgerServer", "EdsgerServer\EdsgerServer.csproj", "{CC4D41D3-9874-4134-91CA-4090784B3FEA}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EdsgerFSharp", "EdsgerFSharp\EdsgerFSharp.fsproj", "{9DADED7B-330F-40EC-A37E-D6D1298296A0}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EdsgerDriver", "EdsgerDriver\EdsgerDriver.fsproj", "{9DADED7B-330F-40EC-A37E-D6D1298296A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

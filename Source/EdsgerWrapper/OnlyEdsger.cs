@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.Boogie;
-  
-namespace EdsgerDriver
+﻿using Microsoft.Boogie;
+
+namespace EdsgerWrapper
 {
   public class OnlyEdsger
   {

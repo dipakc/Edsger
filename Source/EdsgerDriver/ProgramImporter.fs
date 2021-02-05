@@ -5,7 +5,7 @@ open System.Reflection.Emit
 open Edsger.Types
 open Microsoft.Boogie
 
-open EdsgerFSharp.Utils
+open EdsgerDriver.Utils
 
 let ToEdOpcode(opCode: BinaryOperator.Opcode): EDOpcode =
     match opCode with

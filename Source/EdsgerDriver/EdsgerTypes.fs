@@ -1,7 +1,7 @@
 module Edsger.Types
 
 open Microsoft.Boogie
-open EdsgerFSharp.Utils
+open EdsgerDriver.Utils
 
 type IEDBase = interface end
 type IEDMixedCmd = interface

@@ -17,13 +17,14 @@ export function activate(context: vscode.ExtensionContext) {
 	//Write to output.
 	edsgerPanel.appendLine("EdsgerVSCodeClient is now active!");
 
-	function executeTactic(tacticName: string) {
+	function executeTactic(args: string[]) {
 		edsgerPanel.appendLine(tacticName);
 
 		var filepath = vscode.window.activeTextEditor?.document.uri.fsPath;
-		var exepath = "/Users/dipakc/SourceRepos/Edsger/Source/EdsgerFSharp/bin/Debug/netcoreapp3.1/EdsgerFSharp.dll"
+		var exepath = "/Users/dipakc/SourceRepos/Edsger/Source/EdsgerDriver/bin/Debug/netcoreapp3.1/EdsgerDriver.dll"
 
-		var fullcmd = "dotnet " + exepath + " --file " + filepath + " --tactic " + tacticName
+		// var fullcmd = "dotnet " + exepath + " --file " + filepath + " --tactic " + tacticName;
+		var fullcmd = "dotnet " + exepath + " --file " + filepath  + args.join(' ');
 
 		var foo: child.ChildProcess = 
 			child.exec(fullcmd, 
@@ -52,7 +53,7 @@ export function activate(context: vscode.ExtensionContext) {
 	}));
 
 	context.subscriptions.push(vscode.commands.registerCommand('EdsgerVSCodeClient.Synthesize', () => {
-		executeTactic("Synthesize");
+		executeTactic(["--tactic", "Synthesize", "--synthGrammar", "/Users/dipakc/SourceRepos/Edsger/Test/grammar2.txt"]);
 	}));
 	
 	context.subscriptions.push(vscode.commands.registerCommand('EdsgerVSCodeClient.ConjunctAsInv', () => {	

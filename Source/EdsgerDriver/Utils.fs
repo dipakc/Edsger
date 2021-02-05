@@ -1,4 +1,4 @@
-module EdsgerFSharp.Utils
+module EdsgerDriver.Utils
 
 let Unk<'T> : 'T = failwith "Not implemented yet"
 

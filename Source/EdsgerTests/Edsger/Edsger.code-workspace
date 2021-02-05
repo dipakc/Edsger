@@ -1,14 +1,59 @@
 {
 	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "../../../../../.vscode/extensions"
-		},
-		{
-			"path": "../../EdsgerVSCodeClient"
-		}
-	],
-	"settings": {}
+        {
+            "path": "."
+        },
+        {
+            "path": "../../../../../.vscode/extensions"
+        },
+        {
+            "path": "../../EdsgerVSCodeClient"
+        },
+        {
+            "path": "../TestData"
+        }
+    ],
+    "settings": {
+        "scm.diffDecorationsGutterAction": "none",
+        "scm.diffDecorations": "none",
+        "editor.occurrencesHighlight": false,
+        "editor.selectionHighlight": false,
+        "editor.matchBrackets": "never",
+        "editor.renderLineHighlight": "none",
+        "editor.highlightActiveIndentGuide": false,
+        "editor.renderIndentGuides": false,
+        "editor.wordBasedSuggestions": false,
+        "javascript.suggest.enabled": false,
+        "typescript.suggest.enabled": false,
+        "editor.suggest.showInterfaces": false,
+        "editor.suggest.showProperties": false,
+        "editor.suggest.showTypeParameters": false,
+        "editor.suggest.showFolders": false,
+        "editor.suggest.showConstants": false,
+        "editor.suggest.showUsers": false,
+        "editor.suggest.showCustomcolors": false,
+        "editor.suggest.showKeywords": false,
+        "editor.suggest.showSnippets": false,
+        "editor.suggest.showFunctions": false,
+        "editor.suggest.showColors": false,
+        "editor.suggest.showUnits": false,
+        "editor.suggest.showEnumMembers": false,
+        "editor.suggest.showMethods": false,
+        "editor.suggest.showVariables": false,
+        "editor.suggest.showEnums": false,
+        "editor.suggest.showModules": false,
+        "editor.suggest.showStructs": false,
+        "editor.suggest.showConstructors": false,
+        "editor.suggest.showOperators": false,
+        "editor.suggest.showValues": false,
+        "editor.suggest.showFiles": false,
+        "editor.suggest.showWords": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggest.filterGraceful": false,
+        "php.suggest.basic": false,
+        "scss.completion.triggerPropertyValueCompletion": false,
+        "editor.suggest.showIcons": false,
+        "less.completion.triggerPropertyValueCompletion": false,
+        "javascript.suggest.names": false
+    }
 }

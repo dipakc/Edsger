@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="DutchNationalFlag" type="DotNetProject" factoryName=".NET Project">
+  <configuration default="false" name="Verify" type="DotNetProject" factoryName=".NET Project">
     <option name="EXE_PATH" value="$PROJECT_DIR$/EdsgerDriver/bin/Debug/netcoreapp3.1/EdsgerDriver.dll" />
-    <option name="PROGRAM_PARAMETERS" value="--file $PROJECT_DIR$/EdsgerTests/TestData/DutchNationalFlag_01.bpl --tactic ReplaceTermWithVar" />
+    <option name="PROGRAM_PARAMETERS" value="--file $PROJECT_DIR$/EdsgerTests/Edsger/DivMod_01.bpl --tactic Verify" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EdsgerDriver/bin/Debug/netcoreapp3.1" />
     <option name="PASS_PARENT_ENVS" value="1" />
     <option name="USE_EXTERNAL_CONSOLE" value="0" />

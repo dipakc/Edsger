@@ -1,7 +1,7 @@
-module EdsgerFSharp.Transformations
+module EdsgerDriver.Transformations
 
 open Edsger.Types
-open EdsgerFSharp.Utils
+open EdsgerDriver.Utils
 open Microsoft.Boogie
 open Microsoft.Boogie
 open NUnit.Framework

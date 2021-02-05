@@ -1,8 +1,8 @@
-module EdsgerFSharp.Tests
+module EdsgerDriver.Tests
 
 open Edsger.Types
 open Edsger.ProgramImporter
-open EdsgerFSharp.Transformations
+open EdsgerDriver.Transformations
 
 open Microsoft.Boogie
 open NUnit.Framework
